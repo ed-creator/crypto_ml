@@ -24,10 +24,29 @@ _(approx. 1 paragraph)_
 
 In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
 
+There are many crypto-assets one can purchase at any given time. This project aims to maximise returns against a base asset (e.g. Bitcoin, Ethereum or USD). This is an asset selection problem, an allocation of assets will be selected each trading period (24hrs), if the allocation performs better than the base asset that can be considered a succesful period however the model must be evaluated holistically since a 10 small daily gains can be wiped out by one large loss. 
+
+
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
 
 In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+
+Crypto assets has very good price data avaliable however more detailed & rich data about other factors id harder to find. I will primairly use https://coinmetrics.io/data-downloads/ as a data source. For each asset there is daily information on:
+
+ * date	
+ * txVolume(USD): this refers to the usd value of on-chain transactions that occured  	
+ * txCount: this refers to the number of on-chain transactions that occured 	
+ * marketcap(USD): total marketcap of the asset (no. of tokens * price0 	
+ * price(USD): price in usd	
+ * exchangeVolume(USD): volume of transactions accross all exchanges measured	
+ * activeAddresses: number of addresses that have interacted with the token (on-chain) 	
+ * medianTxValue(USD): median transaction value (on-chain)
+ * Asset: The name of the Asset
+ 
+The model will attempt to establish the probability of each asset performing well or poorly agaisnt the base asset for a given period. It will likely require significant data cleaning & normalization of the data, since both absolute values (e.g. marketcap) & relative daily values (% change in marketcap) may help to improve the model. I expect I will use the previous n time periods of a set of assets (including the base asset & asset being evaluated) as the feature set and use the return against the base asset as the label.     
+
+
 
 ### Solution Statement
 _(approx. 1 paragraph)_
