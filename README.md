@@ -72,7 +72,9 @@ Accuracy can be used to quantify the performance of the benchmark model & the so
 
 ### Project Design
 
-Data Collection: Download the data.
+Data Collection: 
+
+Download the data.
 
 Data Pre-Processing: 
 
@@ -90,5 +92,13 @@ Build Neural Net:
 Training the model repeatedly on all the data may lead to a highly biased model since the most crypto assets are highly correlated. For this reason I believe it's a good idea to train the model on an one example data set(or an average of the sets).If it's practical & possible I will then use transfer learning to adapt the model for each individual asset. This will require significant more research from me since transfer learning in RNNs is not common and may not be practical.
 
 I expect to use a Recurrent Neural Net and will most likely use a Multivariate LTSM model. Given that I have not found any similar models used in crytpo asset prediction I will have to experiment a lot to find a good design for the LTSM model. My output layer will use sigmoid activation. 
+
+Improve & Tune Neural Net:
+
+Choose different optimizers and experiment with different data set inputs, layers & activation functions.
+
+Test Model 
+
+Apply the model to new assets ideally on data not in the same date range as the training & validation sets (future data) since bias will most likely exist here. 
 
 
