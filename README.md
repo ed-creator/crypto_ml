@@ -1,13 +1,11 @@
 # crypto_ml
 ## Capstone Proposal
 Edward Ward  
-June 26th, 2018 
+July 16th, 2018 
 
 ## Proposal
 
 ### Domain Background
-
-In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
 
 CryptoCurrency is a form of digital asset that operates in a 24hr, 7 day a week market. It has proven to be a highly volatile market with daily swings of >10% not uncommon. Given the nature of cryptocurrencies living natively on the internet there is a significant amount of open quantitative data avaliable to analyze. Many people have attempted to value crypto assets with fundamental models however due to their speculative nature it has extremely subjective. I believe Machine Learning may prove to be a strong method of estimating short term future cryptocurrency prices. There are several existing academic studies on the subject:
 
@@ -64,7 +62,6 @@ The best analysis of the model will be the performance going into the future. If
 Given this is a fairly under researched topic I found it hard to establish a benchmark model using existing methods. For this reason I am choosing a simple benchmark model of what can be expected by chance based on historical data. E.g. Given the labels [0,1,1,1,1] the benchmark model will randomly select 1 (price increase) with a 80% likelyhood and 0 (price decrease) with a 20% likelyhood.
 
 ### Evaluation Metrics
-_(approx. 1-2 paragraphs)_
 
 In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
 
